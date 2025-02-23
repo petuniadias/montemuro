@@ -1,0 +1,31 @@
+.news {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: #67735C;
+  padding: 50px 100px;
+}
+
+.news-box {
+  width: 400px;
+  border: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.news-title {
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 600;
+}
