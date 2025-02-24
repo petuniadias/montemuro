@@ -5,14 +5,36 @@ body {
 .header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  background-color: rgb(115, 202, 97);
+  background-color: rgb(255, 255, 255);
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
   height: 50px;
   padding: 10px 20px;
+  justify-content: space-between;
+  z-index: 200;
+}
+
+.left-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.right-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-title {
+  font-weight: 600;
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.nav-title:hover {
+  text-decoration: underline;
 }
 
 p {
@@ -22,27 +44,12 @@ p {
 .logo-img {
   width: 50px;
   background-color: transparent;
+  margin-right: 20px;
 }
 
 .logo-title {
   font-weight: 600;
   font-size: 20px;
+
 }
 
-.hamburger-icon {
-  cursor: pointer;
-}
-
-/*ABOUT*/
-.about-container {
-  display: flex;
-  flex-direction: column;
-  padding: 50px 100px;
-  gap: 10px;
-  background-color: #885830;
-}
-
-.about-title {
-  font-size: 25px;
-  font-weight: 600;
-}
