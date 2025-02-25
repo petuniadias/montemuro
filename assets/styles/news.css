@@ -1,7 +1,13 @@
 .news {
   padding-top: 80px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  padding: 20px;
+  margin-top: 80px;
+  position: relative;
 }
 
 .news-box {
@@ -21,7 +27,6 @@
   object-fit: cover;
   cursor: pointer;
   border-radius: 10px;
-
 }
 
 .news-title-box {
@@ -36,16 +41,42 @@
   border-radius: 10px;
 }
 
-.news-title {
+.news-content {
+  display: flex;
   position: absolute;
-  bottom: 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: white;
+  bottom: 0px;
   padding: 15px;
   padding-top: 20px;
 }
 
+.news-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
 .news-box:hover {
   transform: scale(1.1, 1.1);
+}
+
+.news-content-preview {
+  color: white;
+  position: absolute;
+}
+
+.news-button {
+  position: absolute;
+  right: 10px;
+  top: 130px;
+  background-color: white;
+  z-index: 100;
+  border-radius: 100%;
+  padding: 10px 10px 5px 10px;
+  cursor: pointer;
+
+}
+
+.news-button > img {
+  width: 25px;
+  height: 25px;
 }
