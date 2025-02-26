@@ -57,7 +57,7 @@ body {
   color: white;
   position: absolute;
   bottom: 0px;
-  padding: 15px;
+  padding: 0px 15px;
 }
 
 .news-box:hover {
@@ -70,6 +70,7 @@ body {
   display: none;
   bottom: 0;
   padding: 15px;
+  font-size: 15px;
 }
 
 .right-button {
