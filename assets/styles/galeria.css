@@ -1,0 +1,57 @@
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 80px 70px;
+}
+
+.photo-box {
+  width: 250px;
+  height: 250px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.5s ease-in-out;
+}
+
+.photo-box:hover .photo {
+  transform: scale(1.1);
+}
+
+.overlay {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: opacity 0.25s ease-out;
+  z-index: 2;
+}
+
+.photo-box:hover .overlay{
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.715);
+}
+
+.see-btn {
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 43%;
+  left: 43%;
+}
