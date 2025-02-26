@@ -1,31 +1,60 @@
-document.querySelectorAll('.news-box').forEach(box => {
-  const newsContent = box.querySelector('.news-content');
-  const newsTitle = box.querySelector('.news-title');
+function displayDescription() {
+  document.querySelectorAll('.news-box').forEach(box => {
+    const newsDescription = box.querySelector('.news-description');
+    const newsTitle = box.querySelector('.news-title');
 
-  box.addEventListener('mouseenter', () => {
-    if (!box.newsContentPreview) { // Evita múltiplos elementos
-      const newsContentPreview = document.createElement('p');
-      newsContentPreview.classList.add('news-content-preview');
-      newsContentPreview.innerHTML = `Hoje na cidade de Petersburgo, a Ovelha Xoné...`;
+    box.addEventListener('mouseenter', () => {
+      newsDescription.style.display = 'block';
+      newsTitle.style.bottom = `60px`;
+    });
+    box.addEventListener('mouseleave', () => {
+      newsDescription.style.display = 'none';
+      newsTitle.style.bottom = '0px';
+      
+    });
+  });
+}
 
-      newsContent.appendChild(newsContentPreview);
+displayDescription();
 
-      box.newsContentPreview = newsContentPreview;
+const news = document.querySelector('.news');
+const rightButton = document.querySelector('.right-button');
+const leftButton = document.querySelector('.left-button');
 
-      newsTitle.style.transform = 'translateY(-55px)'; // Move o título para cima
-      newsTitle.style.transition = 'transform 0.3s ease-in-out'; // Animação suave
-      newsContent.style.transform = 'translateY(15px)'; // Move o título para cima
-      newsContent.style.transition = 'transform 0.3s ease-in-out'; // Animação suave
-    }
+
+function buttons() {
+  rightButton.addEventListener('click', () => {
+    news.scrollBy ({
+      left: 320,
+      behavior: 'smooth'
+    });
   });
 
-  box.addEventListener('mouseleave', () => {
-    if (box.newsContentPreview) {
-      newsContent.removeChild(box.newsContentPreview);
-      box.newsContentPreview = null;
-
-      newsTitle.style.transform = 'translateY(-20px)'; // Move o título para cima
-      newsTitle.style.transition = 'transform 0.3s ease-in-out'; // Animação suave
-    }
+  leftButton.addEventListener('click', () => {
+    news.scrollBy ({
+      left: -320,
+      behavior: 'smooth'
+    });
   });
-});
+}
+
+buttons();
+
+function updateButtonVisibility() {
+
+  if (news.scrollLeft === 0) {
+    leftButton.style.display = 'none';
+  } else {
+    leftButton.style.display = 'block';
+  }
+
+  if (news.scrollLeft + news.clientWidth >= news.scrollWidth) {
+    rightButton.style.display = 'none';
+  } else {
+    rightButton.style.display = 'block';
+  }
+}
+
+updateButtonVisibility();
+
+news.addEventListener('scroll', updateButtonVisibility);

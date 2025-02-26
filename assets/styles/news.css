@@ -1,16 +1,25 @@
+body {
+  font-family: Montserrat;
+}
+
+.news-main {
+  position: relative;
+}
+
 .news {
   padding-top: 80px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
   gap: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
   overscroll-behavior-y: none;
   padding: 20px;
   margin-top: 80px;
   position: relative;
+
 }
 
 .news-box {
+  flex: 0 0 auto;
   width: 300px;
   height: 270px;
   border: none;
@@ -37,46 +46,63 @@
   right: 0;
   bottom: 0;
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  height: 200px;
+  height: 270px;
   border-radius: 10px;
-}
-
-.news-content {
-  display: flex;
-  position: absolute;
-  bottom: 0px;
-  padding: 15px;
-  padding-top: 20px;
 }
 
 .news-title {
   font-size: 20px;
   font-weight: 600;
   color: white;
+  position: absolute;
+  bottom: 0px;
+  padding: 15px;
 }
 
 .news-box:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.1);
 }
 
-.news-content-preview {
+.news-description {
   color: white;
   position: absolute;
+  display: none;
+  bottom: 0;
+  padding: 15px;
 }
 
-.news-button {
+.right-button {
   position: absolute;
-  right: 10px;
-  top: 130px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: white;
   z-index: 100;
   border-radius: 100%;
-  padding: 10px 10px 5px 10px;
+  padding: 10px 11px 5px 10px;
   cursor: pointer;
-
 }
 
-.news-button > img {
+.left-button {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  background-color: white;
+  z-index: 100;
+  border-radius: 100%;
+  padding: 10px 11px 5px 10px;
+  cursor: pointer;
+
+  transform: translateY(-50%);
+}
+
+.right-button > img {
   width: 25px;
   height: 25px;
+}
+
+.left-button > img {
+  width: 25px;
+  height: 25px;
+  transform: rotate(180deg);
 }
