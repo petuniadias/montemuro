@@ -4,16 +4,17 @@ body {
 
 .news-main {
   position: relative;
+  background-color: rgb(43, 25, 19);
 }
 
+
+
 .news {
-  padding-top: 80px;
   display: flex;
   gap: 20px;
   overflow-x: hidden;
   overscroll-behavior-y: none;
   padding: 20px;
-  margin-top: 80px;
   position: relative;
 
 }
