@@ -1,0 +1,69 @@
+
+/* NEWS */
+
+.news-main {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+}
+
+
+.news {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+  padding: 20px;
+  position: relative;
+
+}
+
+
+/* BODY */
+
+.tree {
+  color: green;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.news-side-content {
+  display: flex;
+  padding: 100px 200px;
+}
+
+.image-implement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.image-implement img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.news-content-and-news {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+.break {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.359);
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.title-and-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.data {
+  font-weight: 500;
+  color:rgba(0, 0, 0, 0.737);
+}

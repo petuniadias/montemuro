@@ -131,6 +131,15 @@ p {
 
 }
 
+/* PAGE BREAK */
+
+.break {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.359);
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
 
 /* FOOTER */
 
