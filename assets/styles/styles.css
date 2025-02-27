@@ -109,14 +109,17 @@ p {
   white-space: nowrap;
   font-size: 15px;
   transition: background-color 0.25s;
+  font-weight: 500;
 }
 
 .dropdown-menu a:hover {
   background-color: #dedede;
+  color: #f58940;
 }
 
 .dropdown-menu a:active {
   background-color: #c7c7c7;
+  color: #f58940;
 }
 
 .nav-item {
@@ -136,7 +139,7 @@ p {
 .break {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.359);
-  height: 1px;
+  height: 0.5px;
   margin-top: 15px;
   margin-bottom: 30px;
 }
@@ -178,7 +181,7 @@ p {
 
 .footer-right-section {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 
 .footer-top-section {
@@ -195,4 +198,8 @@ p {
 
 .copy-right {
   margin: 0;
+}
+
+.footer-right-section a {
+  color: white;
 }
