@@ -168,11 +168,11 @@ p {
 
 .footer-title {
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .footer-content {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   cursor: pointer;
 }
 
@@ -194,5 +194,5 @@ p {
 }
 
 .copy-right {
-  
+  margin: 0;
 }
