@@ -17,7 +17,9 @@ async function store() {
   
   if (username === admin.username && password === admin.password) {
     console.log('Logged In');
+    window.location.href = "painel-de-controlo.html";
   } else {
     errorMessage.style.display = `block`;
   }
 }
+
