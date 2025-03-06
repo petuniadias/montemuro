@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="assets/styles/admin.css">
   <title>Admin</title>
 </head>
 <body>
+  <section class="credentials-section">
+    <div class="credentials">
+      <div class="values-section">
+        <label for="username">Username</label>
+        <input class="js-username" id="username">
+        <label for="password">Password</label>
+        <input class="js-password" type="password" id="password">
+        <div class="login-error-message">
+          Credenciais incorretas!
+        </div>
+      </div>
+      <button class="js-login-btn" type="submit">Login</button>
+    </div>
+    
+
+  </section>
   <footer class="footer">
     <div class= footer-top-section>
       <div class="logo-section">
@@ -92,5 +110,7 @@
       &copy; 2025 Projeto Montemuro XXI
     </div>
   </footer>
+
+  <script src="assets/scripts/admin.js"></script>
 </body>
 </html>

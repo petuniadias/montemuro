@@ -1,0 +1,47 @@
+.credentials-section {
+  display: flex;
+  justify-content: center;
+}
+
+.credentials {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+  align-items: center;
+}
+
+.credentials input {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  border: 1px solid black;
+}
+
+.credentials label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.credentials button {
+  font-size: 17px;
+  padding: 10px 20px;
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  border: none;
+  background-color: rgb(255, 134, 48);
+}
+
+.values-section {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.login-error-message {
+  display: none;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: red;
+}
