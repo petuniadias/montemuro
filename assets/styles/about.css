@@ -7,9 +7,8 @@
 
 .about-title {
   margin: 0;
+  animation: mymove 2s ease-out;
 }
-
-
 
 .about-text-and-btn {
   display: flex;
@@ -20,6 +19,7 @@
 .about-content {
   display: flex;
   gap: 100px;
+  animation: mymove 2s;
 }
 
 .about-img {
@@ -47,4 +47,13 @@
 
 .see-more-btn:hover {
   opacity: 0.8;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
